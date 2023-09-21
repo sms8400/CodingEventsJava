@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EventCategoryRepository extends CrudRepository<EventCategory, Integer> {
-    void save(org.LaunchCode.codingevents.models.EventCategory category);
+//    void save(org.launchcode.codingevents.models.EventCategory category);
 }
