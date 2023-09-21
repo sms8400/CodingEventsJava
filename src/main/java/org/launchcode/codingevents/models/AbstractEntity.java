@@ -1,4 +1,4 @@
-package org.LaunchCode.codingeventsreview.models;
+package org.launchcode.codingevents.models;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

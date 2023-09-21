@@ -1,4 +1,4 @@
-package org.LaunchCode.codingeventsreview.models;
+package org.launchcode.codingevents.models;
 
 public enum EventType {
 

@@ -1,9 +1,10 @@
-package org.LaunchCode.codingeventsreview.data;
+package org.launchcode.codingevents.data;
 
-import org.LaunchCode.codingeventsreview.models.EventCategory;
+import org.launchcode.codingevents.models.EventCategory;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EventCategoryRepository extends CrudRepository<EventCategory, Integer> {
+    void save(org.LaunchCode.codingevents.models.EventCategory category);
 }

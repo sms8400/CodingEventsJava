@@ -1,4 +1,4 @@
-package org.LaunchCode.codingeventsreview.models;
+package org.launchcode.codingevents.models;
 
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Email;

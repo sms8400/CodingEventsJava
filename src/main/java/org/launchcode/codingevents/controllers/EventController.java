@@ -1,8 +1,8 @@
-package org.LaunchCode.codingeventsreview.controllers;
+package org.launchcode.codingevents.controllers;
 
 import jakarta.validation.Valid;
-import org.LaunchCode.codingeventsreview.data.EventRepository;
-import org.LaunchCode.codingeventsreview.models.Event;
+import org.LunchCode.codingevents.data.EventRepository;
+import org.LaunchCode.codingevents.models.Event;
 import org.LaunchCode.codingeventsreview.models.EventType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -67,7 +67,6 @@ public class EventController {
     // Renders http://localhost:8080/events/edit/{id}
     @GetMapping("/edit/{eventId}")
     public String displayEditEventForm(Model model, @PathVariable int eventId) {
-        // Don't worry about this Optional syntax until chapter 18.3
         Optional<Event> eventWrapper = eventRepository.findById(eventId);
         if (eventWrapper.isPresent()) {
             Event event = eventWrapper.get();
@@ -80,7 +79,6 @@ public class EventController {
     // Processes form submitted at http://localhost:8080/events/edit
     @PostMapping("/edit")
     public String processEditEventForm(int eventId, String name, String description, String contactEmail) {
-        // Don't worry about this Optional syntax until chapter 18.3
         Optional<Event> eventWrapper = eventRepository.findById(eventId);
         if (eventWrapper.isPresent()) {
             Event event = eventWrapper.get();
@@ -91,3 +89,4 @@ public class EventController {
         }
         return "redirect:/events";
     }
+}
